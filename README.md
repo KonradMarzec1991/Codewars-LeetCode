@@ -1,4 +1,4 @@
 # Codewars solutions
 
 For the time being, it concerns mainly Python, but I plan to expand both JavaScript and SQL.
-Some of were so challangin that are still not finished.
+Some of them were so challanging that are still not finished.
