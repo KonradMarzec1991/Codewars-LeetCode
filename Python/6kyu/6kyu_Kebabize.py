@@ -3,15 +3,15 @@ import re
 
 def kebabize(string):
 
-    string = re.sub('[0-9]', '', string)
-    string = string[:1].lower() + string[1:]
+    mystring = ""
 
     for x in string:
-        if x.isupper():
-            s = "-" + x.lower()
-            string = string.replace(x, s)
+        if x == x.lower() and x.isalpha():
+            mystring += x
+        elif x == x.upper() and x.isalpha():
+            mystring += '-' + x
 
-    return string
+    return mystring.strip('-').lower()
 
 
 print(kebabize('myCamelCased33String'))
