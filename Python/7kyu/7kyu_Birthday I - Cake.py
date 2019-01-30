@@ -1,10 +1,10 @@
 def cake(candles, debris):
 
     if not isinstance(candles, int):
-        return 'Candles should be int!'
+        raise ValueError('Candles should be int!')
 
     if not isinstance(debris, str):
-        return 'Debris must be a string!'
+        raise ValueError('Debris must be a string!')
 
     value = 0
 

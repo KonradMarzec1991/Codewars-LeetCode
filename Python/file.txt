@@ -1,0 +1,10 @@
+Tperson, name and surname, age, sex, height
+1, Jan Kowalski, 25, M, 176
+2, Jan Maliniuk, 55, M, 173
+3, Beata Kowalska, 85, K, 185
+4, Zofia Nowak, 35, K, 145
+5, Robert Zielonka, 25, M, 174
+6, Barbara Nowak, 45, K, 149
+7, Henryka Kowalska, 25, K, 190
+8, Zenon Zenon, 35, M, 179
+9, Jan Kowalski, 15, M, 181
