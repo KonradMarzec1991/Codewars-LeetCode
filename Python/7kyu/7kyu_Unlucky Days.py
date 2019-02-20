@@ -12,7 +12,3 @@ def unlucky_days(year):
             counter += 1
 
     return counter
-
-
-print(unlucky_days(2015))
-print(unlucky_days(1986))

@@ -14,6 +14,3 @@ def first_non_repeating_letter(string):
             break
 
     return ""
-
-
-print(first_non_repeating_letter("t GbFA.9OhIdg5WT9zEzHhThr:CBxc:g:"))

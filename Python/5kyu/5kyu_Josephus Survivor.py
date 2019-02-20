@@ -1,4 +1,4 @@
-def josephus_survivor(n,k):
+def josephus_survivor(n, k):
 
     num = 0
     for x in range(1, n + 1):
