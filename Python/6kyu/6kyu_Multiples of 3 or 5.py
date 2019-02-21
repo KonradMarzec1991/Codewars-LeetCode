@@ -6,6 +6,3 @@ def solution(number):
             sum += x
 
     return sum
-
-
-print(solution(10))

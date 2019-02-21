@@ -23,9 +23,3 @@ def what_is_the_time(time_in_mirror):
         mirror[1] = '0' + mirror[1]
 
     return ":".join(mirror)
-
-
-
-print(what_is_the_time("05:25"))
-print(what_is_the_time("01:50"))
-print(what_is_the_time("11:58"))

@@ -18,6 +18,3 @@ def solution(roman):
         previous = val
 
     return current
-
-
-print(solution("MCDIII"))

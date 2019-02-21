@@ -13,8 +13,3 @@ def order(sentence):
 
     final_list = [words[key] for key in sorted(words.keys())]
     return " ".join(final_list)
-
-
-print(order("is2 Thi1s T4est 3a"))
-
-

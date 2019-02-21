@@ -23,6 +23,3 @@ def find_divisors(n):
     arr = [int(i) for i in arr]
 
     return sorted(set(arr))
-
-
-1e-5

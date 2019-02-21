@@ -12,7 +12,3 @@ def expanded_form(num):
         i -= 1
 
     return string_value[:len(string_value) - 3]
-
-
-print(expanded_form(12))
-

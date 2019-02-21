@@ -22,6 +22,3 @@ def solution(n):
         n -= times * x
 
     return result
-
-
-print(solution(1666))

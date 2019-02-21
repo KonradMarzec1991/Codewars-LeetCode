@@ -3,6 +3,3 @@ def alphabetized(s):
     s.sort(key=lambda x: x.lower())
     s = "".join(s)
     return s
-
-
-print(alphabetized("Codewars can't Load Today"))

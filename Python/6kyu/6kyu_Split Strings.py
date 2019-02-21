@@ -12,7 +12,3 @@ def solution(s):
         arr = wrap(s, 2)
         arr[len(arr) - 1] = arr[len(arr) - 1] + "_"
         return arr
-
-
-print(solution('abc'))
-print(solution('abcdef'))
