@@ -1,4 +1,8 @@
 -- Create your SELECT statement here
-select * from departments
+select id, name
+from departments
 where exists
-(select id, name from sales where price > 98.00)
+(select * from departments
+inner join sales
+on departments.id = sales.department_id
+where sales.price > 98.00);
