@@ -3,12 +3,10 @@ import unittest
 
 
 def sol_equa(n):
-
     if not isinstance(n, int) or n < 0:
         return []
 
     results = []
-
     for sqr in range(1, int(sqrt(n)) + 1):
         if n % sqr == 0:
             y = (n - sqr*sqr)/(4*sqr)
