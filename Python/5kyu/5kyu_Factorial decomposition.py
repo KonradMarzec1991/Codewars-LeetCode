@@ -4,7 +4,6 @@ import math
 def decomp(n):
     if not isinstance(n, int) or n <= 0:
         return ''
-
     d = {}
     for x in range(2, n + 1):
         while x % 2 == 0:

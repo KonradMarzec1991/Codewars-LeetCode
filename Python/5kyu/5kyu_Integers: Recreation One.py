@@ -3,7 +3,6 @@ import itertools
 
 
 def find_divisors(n):
-
     if n == 1:
         return [1]
 
@@ -17,14 +16,11 @@ def find_divisors(n):
     if math.sqrt(n) == threshold:
         d.append(threshold)
     d.append(n)
-
     return sorted(d)
 
 
 def list_squared(m, n):
-
     my_list = []
-
     for i in range(m, n + 1):
         l = find_divisors(i)
         s_pow = sum(list(map(pow, l, itertools.repeat(2))))
