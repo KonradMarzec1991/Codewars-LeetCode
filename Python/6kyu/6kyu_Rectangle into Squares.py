@@ -1,10 +1,8 @@
 def sqInRect(lng, wdth):
-
     if lng == wdth:
         return None
 
     result = []
-
     while lng != wdth:
         if lng > wdth:
             lng -= wdth
@@ -12,6 +10,5 @@ def sqInRect(lng, wdth):
         else:
             wdth -= lng
             result.append(lng)
-
     result.append(wdth)
     return result

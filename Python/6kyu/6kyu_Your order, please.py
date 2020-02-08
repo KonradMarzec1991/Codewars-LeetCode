@@ -1,8 +1,6 @@
 def order(sentence):
-
     if len(sentence) == 0:
         return ""
-
     words = {}
     my_sentence_split = ("" + sentence).split()
 

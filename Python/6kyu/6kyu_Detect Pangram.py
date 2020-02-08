@@ -1,7 +1,5 @@
-import string
-
-
 def is_pangram(s):
+    import string
     d = dict.fromkeys(string.ascii_lowercase, 0)
     s_with_strings_only = [x.lower() for x in s if isinstance(x, str)]
 

@@ -1,8 +1,5 @@
-import math
-
-
 def solution(n):
-
+    import math
     if not isinstance(n, int) and not isinstance(n, float):
         return "Not a number!!!"
 

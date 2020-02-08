@@ -1,8 +1,6 @@
 def unique_in_order(iterable):
-
     if iterable is None or len(iterable) == 0:
         return []
-
     my_list = []
     x = 0
 
@@ -12,7 +10,6 @@ def unique_in_order(iterable):
         x += 1
 
     my_list.append(iterable[len(iterable) - 1])
-
     return my_list
 
 

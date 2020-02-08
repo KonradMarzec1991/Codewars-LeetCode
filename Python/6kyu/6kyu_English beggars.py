@@ -1,5 +1,3 @@
-
-
 def beggars(values, n):
     from queue import Queue
     if n == 0:

@@ -1,6 +1,3 @@
-from math import sqrt
-
-
 def is_ore(n):
     temp = 0.0
 
@@ -13,6 +10,7 @@ def is_ore(n):
 
 
 def find_divisors(n):
+    from math import sqrt
     arr = [1]
     for x in range(2, int(sqrt(n)) + 1):
         if n % x == 0:
@@ -21,5 +19,4 @@ def find_divisors(n):
 
     arr.append(n)
     arr = [int(i) for i in arr]
-
     return sorted(set(arr))

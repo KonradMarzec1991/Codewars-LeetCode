@@ -1,11 +1,9 @@
-import string
-import itertools
-
-
 def alphabet_position(text):
-
+    import string
+    import itertools
     text = "".join(x for x in text if x.isalpha()).lower()
-    alphabet = dict(zip(string.ascii_lowercase, itertools.count(start=0, step=1)))
+    alphabet = dict(zip(string.ascii_lowercase,
+                        itertools.count(start=0, step=1)))
     print(alphabet)
     my_list = []
 

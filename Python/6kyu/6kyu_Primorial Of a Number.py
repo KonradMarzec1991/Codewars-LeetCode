@@ -16,11 +16,5 @@ def num_primorial(n):
             index += 1
             mult *= counter
         counter += 1
-
     return mult
-
-
-print(num_primorial(3))
-print(num_primorial(5))
-print(num_primorial(6))
 
