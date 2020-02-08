@@ -9,7 +9,6 @@ nums = {
 
 
 def parse_int(string):
-
     values = string.split(" ")
     temp = 0
     temp_2 = 0

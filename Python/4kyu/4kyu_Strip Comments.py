@@ -1,7 +1,5 @@
-# CodeWars Strip Comments
 def solution(string, markers):
     rows = string.split('\n')
-    print(rows)
     for marker in markers:
         for v in range(len(rows)):
             if marker in rows[v]:
