@@ -1,4 +1,4 @@
-def josephus(items,k):
+def josephus(items, k):
     num = -1
     my_list = []
 
@@ -9,6 +9,3 @@ def josephus(items,k):
         num -= 1
 
     return my_list
-
-
-print(josephus([1, 2, 3, 4, 5, 6, 7], 3))
