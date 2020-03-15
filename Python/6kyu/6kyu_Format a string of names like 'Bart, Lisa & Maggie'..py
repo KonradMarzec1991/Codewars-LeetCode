@@ -7,9 +7,7 @@ def namelist(names):
         return names[0]['name'] + " & " + names[1]['name']
 
     names = [d['name'] for d in names]
-    print(names)
     output = ""
-
     for name in names:
         if names.index(name) == 0:
             output += name
@@ -17,11 +15,5 @@ def namelist(names):
             output += " & " + name
         else:
             output += ", " + name
-
     return output
-
-
-print(namelist([{'name': 'Bart'}, {'name': 'Lisa'}, {'name': 'Maggie'}]))
-
-
 
