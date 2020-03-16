@@ -7,10 +7,7 @@ def num_primorial(n):
                 return False
         return True
 
-    counter = 2
-    index = 0
-    mult = 1
-
+    counter, index, mult = 2, 0, 1
     while index != n:
         if check_if_prime(counter):
             index += 1
