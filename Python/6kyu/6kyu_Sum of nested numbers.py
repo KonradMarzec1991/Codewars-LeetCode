@@ -1,12 +1,8 @@
-def sum_nested_numbers(arr):
-    depth, final = 1, 0
-    for val in arr:
-        if isinstance(val, int):
-            final += val ** depth
+def sum_nested_numbers(arr, depth=1):
+    result = 0
+    for item in arr:
+        if isinstance(item, int):
+            result += item ** depth
         else:
-            depth += 1
-            sum_nested_numbers(val)
-    return
-
-
-print(sum_nested_numbers([6, [5], [[4]], [[[3]]], [[[[2]]]], [[[[[1]]]]]]))
+            result += sum_nested_numbers(item, depth + 1)
+    return result

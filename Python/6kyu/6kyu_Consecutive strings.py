@@ -8,5 +8,3 @@ def longest_consec(strarr, k):
             longest = connected
         j += 1
     return longest
-
-
