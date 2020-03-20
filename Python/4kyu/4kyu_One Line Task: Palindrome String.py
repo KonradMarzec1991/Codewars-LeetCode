@@ -1,0 +1,1 @@
+palindrome=lambda n,c:(c[n%2:][::-1]+c).center(n,c[0])
