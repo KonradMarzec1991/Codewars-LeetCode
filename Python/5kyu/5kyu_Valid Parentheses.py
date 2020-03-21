@@ -1,8 +1,5 @@
-import re
-
-
 def valid_parentheses(string):
-
+    import re
     LPAREN = r'(?P<LPAREN>\()'
     RPAREN = r'(?P<RPAREN>\))'
     WS = r'(?P<WS>\s+)'

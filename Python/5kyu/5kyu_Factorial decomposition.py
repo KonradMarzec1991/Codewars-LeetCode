@@ -1,7 +1,5 @@
-import math
-
-
 def decomp(n):
+    import math
     if not isinstance(n, int) or n <= 0:
         return ''
     d = {}

@@ -15,9 +15,3 @@ def buddy(start, limit):
         if sum_divisors(val) - 1 == i and val > i:
             return [i, val]
     return 'Nothing'
-
-
-print(buddy(10, 50))
-print(buddy(2177, 4357))
-print(buddy(57345, 90061))
-print(buddy(1071625, 1103735))

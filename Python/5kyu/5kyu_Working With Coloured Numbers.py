@@ -1,7 +1,5 @@
-from math import sqrt
-
-
 def same_col_seq(val, k, col):
+    from math import sqrt
     if col == 'yellow':
         return []
     output = []

@@ -1,8 +1,5 @@
-import math
-import itertools
-
-
 def find_divisors(n):
+    import math
     if n == 1:
         return [1]
 
@@ -20,6 +17,8 @@ def find_divisors(n):
 
 
 def list_squared(m, n):
+    import itertools
+    import math
     my_list = []
     for i in range(m, n + 1):
         l = find_divisors(i)
