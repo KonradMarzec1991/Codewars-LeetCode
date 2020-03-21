@@ -6,3 +6,7 @@ def sum_nested_numbers(arr, depth=1):
         else:
             result += sum_nested_numbers(item, depth + 1)
     return result
+
+
+
+sum_nested_numbers([2, [3], [4 + [5]]])
