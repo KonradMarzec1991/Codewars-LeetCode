@@ -30,5 +30,3 @@ def spiral(array):
     return arr
 
 
-spiral(p)
-
