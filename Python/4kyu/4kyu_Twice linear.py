@@ -10,9 +10,3 @@ def dbl_linear(n):
         if min(x, y) == y:
             y0 += 1
     return arr[n]
-
-
-print(dbl_linear(10))
-print(dbl_linear(20))
-print(dbl_linear(30))
-print(dbl_linear(50))
