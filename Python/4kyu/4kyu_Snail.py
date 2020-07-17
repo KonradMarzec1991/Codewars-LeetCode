@@ -20,3 +20,13 @@ def snail(snail_map):
                 arr.append(snail_map[i][c])
             c += 1
     return arr
+
+
+# Amazing solution from CW
+def snail_v2(array):
+    a = []
+    while array:
+        a.extend(list(array.pop(0)))
+        array = list(zip(*array))
+        array.reverse()
+    return a
