@@ -16,17 +16,3 @@ def longest_palindrome(s):
     return longest
 
 
-p = [[1, 2, 3],
-     [8, 9, 4],
-     [7, 6, 5]]
-
-
-def spiral(array):
-    arr = []
-    while array:
-        arr.extend(array.pop(0))
-        array = list(zip(*array))
-        array.reverse()
-    return arr
-
-
