@@ -1,0 +1,1 @@
+always_odd=lambda n:n-(n%2==0)
