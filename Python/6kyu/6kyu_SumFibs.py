@@ -8,7 +8,3 @@ def sum_fibs(n):
             total += k
         n -= 1
     return total
-
-
-print(sum_fibs(5))
-print(sum_fibs(9))
