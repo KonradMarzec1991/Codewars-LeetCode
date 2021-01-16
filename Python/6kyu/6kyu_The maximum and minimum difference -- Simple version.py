@@ -10,6 +10,3 @@ def max_and_min(arr1, arr2):
             if diff < min_val:
                 min_val = diff
     return [max_val, min_val]
-
-
-print(max_and_min([3,10,5],[20,7,15,8]),[17,2])
