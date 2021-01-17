@@ -1,9 +1,12 @@
 class RememberMeta(type):
-    def __new__(mcs, name, bases, cls_dict):
-        return super().__new__(mcs, name, bases, cls_dict)
+    instances = {}
 
     def __call__(cls, *args):
-        print(*args)
+        existing_instance = RememberMeta.instances.get(tuple(args), None)
+        print(existing_instance)
+        if existing_instance is None:
+            RememberMeta.instances[tuple(args)] = super().__call__(*args)
+        return RememberMeta.instances[tuple(args)]
 
 
 def remember(cls):
