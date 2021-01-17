@@ -1,9 +1,20 @@
 class RememberMeta(type):
-    instances = {}
+    instances = dict()
+
+    def __getitem__(self, *key):
+        if isinstance(*key, int):
+            return RememberMeta.instances.get(key, None)
+        return RememberMeta.instances.get(tuple(*key), None)
+
+    def __len__(self):
+        return len(self.instances)
+
+    def __iter__(self):
+        for key in self.instances.keys():
+            yield key
 
     def __call__(cls, *args):
         existing_instance = RememberMeta.instances.get(tuple(args), None)
-        print(existing_instance)
         if existing_instance is None:
             RememberMeta.instances[tuple(args)] = super().__call__(*args)
         return RememberMeta.instances[tuple(args)]
@@ -21,9 +32,3 @@ def remember(cls):
 class A:
    def __init__(self, x, y=0, z=0):
      pass
-
-
-a = A(1)
-b = A(2, 3)
-c = A(4, 5, 6)
-d = A(1)
