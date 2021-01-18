@@ -13,6 +13,12 @@ class FuncAdd:
         self.values[key].append(result)
         print(self.values)
 
+    def delete(self, fn_name):
+        self.values.pop(fn_name)
+
+    def clear(self):
+        self.values.clear()
+
 
 @FuncAdd
 def foo():
