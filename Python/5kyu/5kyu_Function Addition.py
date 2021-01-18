@@ -1,33 +1,29 @@
 from collections import defaultdict
+from functools import wraps
 
 
 class FuncAdd:
     values = defaultdict(list)
 
     def __init__(self, fn):
-        self.fn = fn
+        wraps(fn)(self)
+        self.name = fn.__name__
+        FuncAdd.values[self.name].append(fn)
 
     def __call__(self, *args, **kwargs):
-        result = self.fn(*args, **kwargs)
-        key = self.fn.__name__
-        self.values[key].append(result)
-        print(self.values)
+        results = []
+        funcs = FuncAdd.values.get(self.name, None)
+        if funcs is not None:
+            for f in funcs:
+                results.append(f(*args, **kwargs))
+            return tuple(results)
+        else:
+            raise NameError
 
-    def delete(self, fn_name):
-        self.values.pop(fn_name)
+    @classmethod
+    def delete(cls, fn):
+        del cls.values[fn.__wrapped__.__name__]
 
-    def clear(self):
-        self.values.clear()
-
-
-@FuncAdd
-def foo():
-    return 'Hello'
-
-
-@FuncAdd
-def foo():
-    return 'World'
-
-
-print(foo())
+    @classmethod
+    def clear(cls):
+        cls.values.clear()
