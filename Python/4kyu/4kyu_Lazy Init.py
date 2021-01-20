@@ -2,15 +2,8 @@ import inspect
 
 
 class LazyInit(type):
-    def __new__(mcs, mcs_name, mcs_bases, mcs_dict):
-        cls = super().__new__(mcs, mcs_name, mcs_bases, mcs_dict)
-        print(inspect.getfullargspec(cls.__init__).args)
+    def __call__(cls, *args, **kwargs):
+        cls = super().__call__(*args, **kwargs)
+        for n, v in zip(inspect.getfullargspec(cls.__init__).args[1:], args):
+            cls.__setattr__(n, v)
         return cls
-
-
-class Person(metaclass=LazyInit):
-    def __init__(self, name='abc', age=123):
-        pass
-
-
-p = Person()
