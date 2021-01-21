@@ -1,3 +1,6 @@
+import abc
+
+
 class AutoStorage:
     def __init__(self, min_value, max_value):
         self._min = min_value
@@ -15,7 +18,23 @@ class AutoStorage:
         instance.__dict__[self.property_name] = value
 
 
+class Validated(abc.ABC, AutoStorage):
+
+    def __set__(self, instance, value):
+        value = self.validate(value)
+        instance.__dict__[self.property_name] = value
+
+    @abc.abstractmethod
+    def validate(self, value):
+        """Implement this method for descriptor"""
+        return NotImplemented
+
+
 class Package:
+    length =
+    width =
+    height =
+    weight =
 
 
     def __init__(self, length, width, height, weight):
