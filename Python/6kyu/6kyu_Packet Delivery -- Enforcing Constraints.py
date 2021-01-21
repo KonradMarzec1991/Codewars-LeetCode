@@ -1,10 +1,11 @@
 import abc
 
 
+class DimensionsOutOfBoundError(Exception):
+    pass
+
+
 class AutoStorage:
-    def __init__(self, min_value, max_value):
-        self._min = min_value
-        self._max = max_value
 
     def __set_name__(self, owner, name):
         self.property_name = name
@@ -22,7 +23,7 @@ class Validated(abc.ABC, AutoStorage):
 
     def __set__(self, instance, value):
         value = self.validate(value)
-        instance.__dict__[self.property_name] = value
+        super().__set__(instance, value)
 
     @abc.abstractmethod
     def validate(self, value):
@@ -30,12 +31,24 @@ class Validated(abc.ABC, AutoStorage):
         return NotImplemented
 
 
-class Package:
-    length =
-    width =
-    height =
-    weight =
+class Quantity(Validated):
+    def __init__(self, min_value, max_value):
+        self._min = min_value
+        self._max = max_value
 
+    def validate(self, value):
+        if value < self._min or value > self._max:
+            raise DimensionsOutOfBoundError(
+                f"Package {self.property_name}=={value} out of bounds, should be: {self._min} < {value} <={self._max}")
+        else:
+            return value
+
+
+class Package:
+    length = Quantity(0, 350)
+    width = Quantity(0, 300)
+    height = Quantity(0, 150)
+    weight = Quantity(0, 40)
 
     def __init__(self, length, width, height, weight):
         self.length = length
