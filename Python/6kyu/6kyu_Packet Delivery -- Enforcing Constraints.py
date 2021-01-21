@@ -39,7 +39,7 @@ class Quantity(Validated):
     def validate(self, value):
         if value < self._min or value > self._max:
             raise DimensionsOutOfBoundError(
-                f"Package {self.property_name}=={value} out of bounds, should be: {self._min} < {value} <={self._max}")
+                f"Package {self.property_name}=={value} out of bounds, should be: {self._min} < {self.property_name} <= {self._max}")
         else:
             return value
 
@@ -56,6 +56,10 @@ class Package:
         self.height = height
         self.weight = weight
 
+    @property
     def volume(self):
         return self.length * self.width * self.height
 
+
+p = Package(10, 12, 13, 20)
+print(p.volume())
