@@ -9,6 +9,3 @@ function averages(numbers) {
         return []
     }
 }
-
-
-console.log(averages([ 1, 3, 5, 1, -10]));
