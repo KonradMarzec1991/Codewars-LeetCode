@@ -11,6 +11,3 @@ function mergesorted(a, b) {
     }
     return z;
 }
-
-
-console.log(mergesorted([1,2,7],[3,4,6]));
