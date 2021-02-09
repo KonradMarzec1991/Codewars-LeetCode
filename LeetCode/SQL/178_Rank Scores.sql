@@ -1,0 +1,11 @@
+# Write your MySQL query statement below
+SELECT Score, 
+(SELECT COUNT(DISTINCT Score) FROM Scores WHERE Score >= s.Score) AS `Rank`
+FROM Scores s ORDER BY Score DESC;
+
+
+# PSQL
+# SELECT
+#        score,
+#        dense_rank() OVER (ORDER BY score DESC)
+# FROM scores;
