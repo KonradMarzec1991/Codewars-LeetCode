@@ -1,4 +1,4 @@
-import math
+from math import gcd
 
 
 class Fraction:
@@ -8,21 +8,20 @@ class Fraction:
         self.bottom = denominator
 
     def __eq__(self, other):
-        first_num = self.top * other.bottom
-        second_num = other.top * self.bottom
-        return first_num == second_num
+        return self.top * other.bottom == other.top * self.bottom
 
     def __add__(self, other):
-        if isinstance(other, self.__class__):
-            bottom = self.bottom * other.bottom
-            top = self.top * other.bottom + self.bottom * other.top
-            gcd = math.gcd(top, bottom)
-            if gcd > 1:
-                top = top // gcd
-                bottom = bottom // gcd
-            return Fraction(top, bottom)
-        else:
-            raise TypeError('Other is not a Fraction type!')
+        if not isinstance(other, self.__class__):
+            raise TypeError("Wrong type - Fraction expected")
+        new_denominator = self.bottom * other.bottom
+        nominator1 = self.top * other.bottom
+        nominator2 = other.top * self.bottom
+        new_nominator = nominator1 + nominator2
+
+        x = gcd(new_nominator, new_denominator)
+        self.top = int(new_nominator / x)
+        self.bottom = int(new_denominator / x)
+        return self
 
     def __repr__(self):
-        return f'{self.top}/{self.bottom}'
+        return f"{self.top}/{self.bottom}"
