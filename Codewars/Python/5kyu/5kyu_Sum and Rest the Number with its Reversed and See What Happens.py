@@ -15,16 +15,3 @@ def sum_dif_rev(n):
                     temp.append(rev)
         i += 9
     return start_list[n-1]
-
-
-# print(sum_dif_rev(1))
-# print(sum_dif_rev(2))
-# print(sum_dif_rev(3))
-# print(sum_dif_rev(4))
-res = []
-for i in range(30):
-    res.append(sum_dif_rev(i))
-
-print(res)
-for i in res:
-    print(i % 9)

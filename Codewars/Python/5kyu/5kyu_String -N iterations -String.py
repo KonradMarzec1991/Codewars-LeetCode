@@ -6,7 +6,3 @@ def jumbled_string(s, n):
             break
         cache.append(s)
     return cache[n % len(cache)]
-
-
-print(jumbled_string('abcde', 10))
-print(jumbled_string("Such Wow!", 1))

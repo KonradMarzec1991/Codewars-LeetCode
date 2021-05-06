@@ -27,7 +27,6 @@ class Vector:
             return sum(my * oth for my, oth in zip(self.arguments, other.arguments))
 
     def cross(self, other):
-        print('Pysio jest najlepszy!')
         return Vector(
             self.y * other.z - self.z * other.y,
             self.z * other.x - self.x * other.z,

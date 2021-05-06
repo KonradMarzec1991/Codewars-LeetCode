@@ -16,5 +16,3 @@ def tree_to_list(tree_root):
         if node.child_nodes:
             leaves.extend(node.child_nodes)
     return data
-
-
