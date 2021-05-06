@@ -11,6 +11,3 @@ def unique_in_order(iterable):
 
     my_list.append(iterable[len(iterable) - 1])
     return my_list
-
-
-

@@ -5,4 +5,3 @@ def gen(n, iterable):
     while True:
         yield result
         result = result[1:] + (next(it), )
-

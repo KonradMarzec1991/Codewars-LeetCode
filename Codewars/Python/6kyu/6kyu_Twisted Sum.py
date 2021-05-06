@@ -7,8 +7,3 @@ def compute_sum(n):
         s += x
         n -= 1
     return s
-
-
-print(compute_sum(12))
-print(compute_sum(10))
-print(compute_sum(4))

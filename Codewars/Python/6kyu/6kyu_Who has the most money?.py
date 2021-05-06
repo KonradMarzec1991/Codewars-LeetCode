@@ -1,5 +1,7 @@
+from itertools import groupby
+
+
 def most_money(students):
-    from itertools import groupby
     if len(students) == 1:
         return students[0].name
     d_money = {}

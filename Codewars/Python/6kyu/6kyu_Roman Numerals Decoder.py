@@ -5,15 +5,11 @@ def solution(roman):
 
     if not isinstance(roman, str):
         raise TypeError("Must be a string!!!")
-
     if roman in romans:
         return romans[roman]
-
     current = previous = 0
-
     for x in roman:
         val = romans.get(x)
         current = current + val if previous >= val else current + val - 2 * previous
         previous = val
-
     return current
