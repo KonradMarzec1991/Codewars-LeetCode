@@ -6,5 +6,3 @@ def string_func(s, x):
         if arr[-1] == arr[0]:
             break
     return arr[x % (len(arr)-1)]
-
-

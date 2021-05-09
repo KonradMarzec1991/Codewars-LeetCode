@@ -7,7 +7,3 @@ def count_change(money, coins):
             if i >= coin:
                 combinations[i] += combinations[i-coin]
     return combinations[money]
-
-
-
-

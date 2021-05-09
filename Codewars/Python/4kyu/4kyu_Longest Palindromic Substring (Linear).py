@@ -14,5 +14,3 @@ def longest_palindrome(s):
         i += 1
         j = i + 1
     return longest
-
-

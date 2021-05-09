@@ -29,5 +29,4 @@ def parse_int(string):
         if '-' in value:
             twenties, ones = value.split('-')
             temp += nums[twenties] + nums[ones]
-
     return temp_2 + temp

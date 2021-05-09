@@ -13,5 +13,3 @@ def exp_sum(n):
                 val_combination = matrix[i][j-i]
                 matrix[i][j] = val_up + val_combination
     return matrix[n][n]
-
-
