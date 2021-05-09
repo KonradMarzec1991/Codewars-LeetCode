@@ -1,2 +1,1 @@
-def sortme(names):
-    return sorted(names)
+sortme = sorted
