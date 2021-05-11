@@ -31,6 +31,3 @@ class ExampleClass:
 
 a = ExampleClass(1, 5)  # unique ID=1
 b = ExampleClass(2, 8)  # unique ID=2
-
-print(ExampleClass(1, 20).value)
-print(ExampleClass(3, 0).value)

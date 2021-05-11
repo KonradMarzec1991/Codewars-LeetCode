@@ -7,5 +7,4 @@ def josephus(items, k):
         my_list.append(items[num])
         items.pop(num)
         num -= 1
-
     return my_list

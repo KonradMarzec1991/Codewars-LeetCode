@@ -1,3 +1,6 @@
+from itertools import cycle
+
+
 def make_looper(string):
     index = 0
 
@@ -27,9 +30,6 @@ def make_looper(s):
     from itertools import cycle
     g = cycle(s)
     return lambda: next(g)
-
-
-from itertools import cycle
 
 
 class make_looper(cycle):

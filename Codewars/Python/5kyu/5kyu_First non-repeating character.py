@@ -8,5 +8,4 @@ def first_non_repeating_letter(string):
         if_duplicate = string.lower().count(letter.lower())
         if if_duplicate == 1:
             return letter
-            break
     return ""

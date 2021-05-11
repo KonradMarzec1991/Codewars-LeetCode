@@ -7,5 +7,3 @@ def beeramid(bonus, price):
     while beers >= qs(i):
         i += 1
     return i - 1
-
-

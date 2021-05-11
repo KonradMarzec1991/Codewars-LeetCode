@@ -10,4 +10,3 @@ def choose_best_sum(t, k, ls):
         if maks == t:
             break
     return maks
-

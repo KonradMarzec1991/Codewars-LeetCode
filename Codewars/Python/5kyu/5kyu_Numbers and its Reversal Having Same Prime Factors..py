@@ -42,14 +42,3 @@ def same_factRev(nMax):
             if set(find_primes(i)) == set(find_primes(rev)):
                 result.append(i)
     return result
-
-
-arr = [1089, 2178, 4356, 6534, 8712, 9801, 10989, 21978, 24024, 26208, 42042, 43956, 48048]
-
-
-print(same_factRev(50000))
-print(same_factRev(2500))
-print(same_factRev(5000))
-print(same_factRev(7000))
-print(same_factRev(9000))
-print(same_factRev(10000))

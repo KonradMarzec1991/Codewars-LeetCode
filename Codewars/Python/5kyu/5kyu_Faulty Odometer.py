@@ -1,8 +1,5 @@
-import numbers
-
 def faulty_odometer(n):
     pass
-
 
 
 num = 2003

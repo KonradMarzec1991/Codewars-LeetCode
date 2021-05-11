@@ -17,7 +17,3 @@ def analyse(x):
 @overload(list)
 def analyse(x):
     print('X is a list!')
-
-
-print(analyse(2))
-print(analyse([]))
